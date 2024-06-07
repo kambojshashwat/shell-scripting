@@ -9,6 +9,7 @@
 # ################
 
 echo "Checking Disk Usage"
+#please modify the grep according to your Disk Volume Size..
 disk=`df -h | grep "8.0G" | awk '{print $5}' | cut -d '%' -f 1`
 
 if [ $disk -gt 80 ]; then
